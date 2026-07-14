@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
+import { FieldValues, Resolver, SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2, Save } from "lucide-react";
 import { toast } from "sonner";
@@ -41,7 +41,7 @@ export default function SettingsPage() {
     useState<NotificationSettings | null>(null);
 
   const preferencesForm = useForm<UserPreferencesInput>({
-    resolver: zodResolver(userPreferencesSchema),
+    resolver: zodResolver(userPreferencesSchema) as Resolver<UserPreferencesInput>,
     defaultValues: {
       preferred_roles: [],
       technologies: [],
@@ -145,7 +145,7 @@ export default function SettingsPage() {
         </TabsList>
 
         <TabsContent value="preferences" className="mt-6">
-          <form onSubmit={preferencesForm.handleSubmit(savePreferences)}>
+          <form onSubmit={preferencesForm.handleSubmit(savePreferences as SubmitHandler<FieldValues>)}>
             <Card>
               <CardHeader>
                 <CardTitle>Job Preferences</CardTitle>
