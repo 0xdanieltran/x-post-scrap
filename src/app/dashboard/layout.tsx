@@ -2,7 +2,7 @@ import { createClient } from "@/lib/supabase/server";
 import { DashboardSidebar } from "@/components/layout/dashboard-sidebar";
 import { redirect } from "next/navigation";
 
-export async function DashboardLayout({
+export default async function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
