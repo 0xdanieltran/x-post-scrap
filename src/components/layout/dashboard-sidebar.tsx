@@ -85,7 +85,7 @@ function NavItems({
               "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
               active
                 ? "bg-primary text-primary-foreground"
-                : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                : "text-muted-foreground hover:bg-muted hover:text-foreground",
             )}
           >
             <Icon className="h-4 w-4 shrink-0" />
@@ -141,11 +141,8 @@ export function DashboardSidebar({
 
       <div className="border-t p-3">
         <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button
-              variant="ghost"
-              className="w-full justify-start gap-3 px-2"
-            >
+          <DropdownMenuTrigger>
+            <Button variant="ghost" className="w-full justify-start gap-3 px-2">
               <Avatar className="h-8 w-8">
                 <AvatarImage src={avatarUrl} />
                 <AvatarFallback>
@@ -165,7 +162,9 @@ export function DashboardSidebar({
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="w-56">
-            <DropdownMenuItem onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+            <DropdownMenuItem
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            >
               {theme === "dark" ? (
                 <Sun className="mr-2 h-4 w-4" />
               ) : (
@@ -174,7 +173,7 @@ export function DashboardSidebar({
               Toggle theme
             </DropdownMenuItem>
             {isAdmin && (
-              <DropdownMenuItem asChild>
+              <DropdownMenuItem>
                 <Link href="/admin/queries">
                   <Shield className="mr-2 h-4 w-4" />
                   Admin Panel
@@ -197,15 +196,19 @@ export function DashboardSidebar({
       <aside
         className={cn(
           "hidden md:flex h-screen flex-col border-r bg-card transition-all duration-300",
-          collapsed ? "w-16" : "w-64"
+          collapsed ? "w-16" : "w-64",
         )}
       >
         {sidebarContent}
       </aside>
 
       <Sheet>
-        <SheetTrigger asChild>
-          <Button variant="ghost" size="icon" className="md:hidden fixed top-3 left-3 z-50">
+        <SheetTrigger>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden fixed top-3 left-3 z-50"
+          >
             <Menu className="h-5 w-5" />
           </Button>
         </SheetTrigger>

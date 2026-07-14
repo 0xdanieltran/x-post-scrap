@@ -77,7 +77,7 @@ export default function ForgotPasswordPage() {
               {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
               Send reset link
             </Button>
-            <Button variant="ghost" asChild className="w-full">
+            <Button variant="ghost"  className="w-full">
               <Link href="/login">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to sign in

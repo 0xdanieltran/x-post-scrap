@@ -37,10 +37,10 @@ export default function LandingPage() {
             <span className="font-semibold text-lg">X Job Fetch</span>
           </div>
           <div className="flex items-center gap-3">
-            <Button variant="ghost" asChild>
+            <Button variant="ghost">
               <Link href="/login">Sign in</Link>
             </Button>
-            <Button asChild>
+            <Button>
               <Link href="/signup">Get Started</Link>
             </Button>
           </div>
@@ -56,7 +56,7 @@ export default function LandingPage() {
             </span>
             Aggregating jobs from X in real-time
           </div>
-          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl bg-linear-to-b from-foreground to-foreground/70 bg-clip-text">
             Discover your next role from X hiring posts
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -65,13 +65,13 @@ export default function LandingPage() {
             preferences — no AI required.
           </p>
           <div className="mt-10 flex items-center justify-center gap-4">
-            <Button size="lg" asChild>
-              <Link href="/signup">
+            <Button size="lg">
+              <Link href="/signup" className="flex items-center justify-center">
                 Start discovering
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild>
+            <Button size="lg" variant="outline">
               <Link href="/login">Sign in</Link>
             </Button>
           </div>
@@ -100,7 +100,10 @@ export default function LandingPage() {
       </section>
 
       <footer className="border-t py-8 text-center text-sm text-muted-foreground">
-        <p>© {new Date().getFullYear()} X Job Fetch. Built with Next.js & Supabase.</p>
+        <p>
+          © {new Date().getFullYear()} X Job Fetch. Built with Next.js &
+          Supabase.
+        </p>
       </footer>
     </div>
   );

@@ -143,14 +143,14 @@ export function JobCard({ job, isSaved, onSave }: JobCardProps) {
           {isSaved ? "Saved" : "Save"}
         </Button>
         {job.application_url && (
-          <Button size="sm" asChild>
+          <Button size="sm" >
             <a href={job.application_url} target="_blank" rel="noopener noreferrer">
               Apply
             </a>
           </Button>
         )}
         {xPost?.url && (
-          <Button variant="ghost" size="sm" asChild>
+          <Button variant="ghost" size="sm" >
             <a href={xPost.url} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="mr-1.5 h-3.5 w-3.5" />
               View on X

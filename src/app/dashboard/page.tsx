@@ -86,7 +86,7 @@ export default async function DashboardOverview() {
       <div>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-semibold">Recent Jobs</h2>
-          <Button variant="outline" size="sm" asChild>
+          <Button variant="outline" size="sm">
             <Link href="/dashboard/jobs">View all</Link>
           </Button>
         </div>
@@ -113,7 +113,8 @@ export default async function DashboardOverview() {
           ))}
           {(recentJobs ?? []).length === 0 && (
             <p className="text-muted-foreground text-center py-8">
-              No jobs collected yet. Admin can trigger ingestion from the admin panel.
+              No jobs collected yet. Admin can trigger ingestion from the admin
+              panel.
             </p>
           )}
         </div>
