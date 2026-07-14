@@ -117,7 +117,7 @@ export default function AdminQueriesPage() {
             Run All
           </Button>
           <Dialog open={open} onOpenChange={setOpen}>
-            <DialogTrigger asChild>
+            <DialogTrigger>
               <Button>
                 <Plus className="mr-2 h-4 w-4" />
                 Add Query

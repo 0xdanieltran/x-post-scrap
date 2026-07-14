@@ -107,7 +107,7 @@ export default function AdminSpamPage() {
                 <CardDescription>Posts containing these are rejected</CardDescription>
               </div>
               <Dialog open={keywordOpen} onOpenChange={setKeywordOpen}>
-                <DialogTrigger asChild>
+                <DialogTrigger>
                   <Button size="sm"><Plus className="mr-1 h-3 w-3" />Add</Button>
                 </DialogTrigger>
                 <DialogContent>
@@ -152,7 +152,7 @@ export default function AdminSpamPage() {
                 <CardDescription>URLs from these domains are rejected</CardDescription>
               </div>
               <Dialog open={domainOpen} onOpenChange={setDomainOpen}>
-                <DialogTrigger asChild>
+                <DialogTrigger>
                   <Button size="sm"><Plus className="mr-1 h-3 w-3" />Add</Button>
                 </DialogTrigger>
                 <DialogContent>
