@@ -76,7 +76,7 @@ async function getLatestTweetId(): Promise<string | undefined> {
 }
 
 export async function runIngestionForQuery(
-  query: SearchQuery
+  query: SearchQuery,
 ): Promise<IngestionResult> {
   const startTime = Date.now();
   const supabase = createServiceClient();
@@ -253,7 +253,7 @@ export async function runFullIngestion(): Promise<IngestionResult[]> {
 }
 
 export async function runManualFetch(
-  queryId: string
+  queryId: string,
 ): Promise<IngestionResult> {
   const supabase = createServiceClient();
   const { data: query, error } = await supabase
